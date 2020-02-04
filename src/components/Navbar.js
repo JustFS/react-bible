@@ -19,9 +19,9 @@ const Navbar = (props) => {
   const searchClass = search ? 'searchInput active' : 'searchInput';
 
   return(
-    <div className="navbar">
-      <ul className="navbarMenu">
-        {/* <Logo /> */}
+    <div className="global-navbar">
+      <ul className="navbar-menu">
+        <li><Logo /></li>
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/horloge">Horloge</NavLink></li>
         <li><NavLink to="/recipe">Recipes</NavLink></li>
@@ -31,13 +31,14 @@ const Navbar = (props) => {
         <li><NavLink to="/markdown">Markdown</NavLink></li>
         <li><NavLink to="/youtube-like">Youtube</NavLink></li>
         <li><NavLink to="/weather-app">Appli Meteo</NavLink></li>
+
+        <li className="search">
+          <form onSubmit={submitSearch}>
+            <input type="text" className={searchClass} placeholder="Search" />
+            <img onClick={openSearch} className="searchIcon" src={require('../assets/search.png')} alt="Search" />
+          </form>
+        </li>
       </ul>
-      <div className="search">
-        <form onSubmit={submitSearch}>
-          <input type="text" className={searchClass} placeholder="Search" />
-          <img onClick={openSearch} className="searchIcon" src={require('../assets/search.png')} alt="Search" />
-        </form>
-      </div>
     </div>
   )
 }

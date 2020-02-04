@@ -6,7 +6,7 @@ const Form = (props) => {
       <div>{props.error ? error() : null}</div>
       <form onSubmit={props.loadweather}>
         <div className="row">
-          <div className="col-md-3 offset-md-2">
+          <div className="">
             <input 
               type="text" 
               className="form-control" 
@@ -15,7 +15,7 @@ const Form = (props) => {
               placeholder="City"
             />
           </div>
-          <div className="col-md-3">
+          <div className="">
             <input 
               type="text" 
               className="form-control" 
@@ -24,7 +24,7 @@ const Form = (props) => {
               placeholder="Country"
           />
           </div>
-          <div className="col-md-3 mt-md-0 py-2 text-md-left">
+          <div className="">
             <button className="btn btn-warning">Get weather</button>
           </div>
         </div>

@@ -1,15 +1,22 @@
 import React from 'react';
-import './Logo.css'
+import './Logo.scss'
 
 
 function Logo(props) {
-  return (
-
+  return (  
     <div className="logo-container">
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
+      <div className="circle"></div>
     </div>
+    
   ); 
 }
 

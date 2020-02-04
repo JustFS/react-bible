@@ -1,41 +1,37 @@
-.navbar{
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-.navbar ul{
-  margin: 0;
-  padding: 0;
-}
-.navbar ul li{
-  list-style: none;
-  display: inline-block;
-}
-.navbar ul li a{
+* {
   text-decoration: none;
-  display: block;
-  font-size: 20px;
-  text-transform: capitalize;
-  font-weight: 400;
-  color: #565673;
-  padding: 0 10px;
 }
-.search form{
+li {
+  list-style-type: none;
+  color: #ddd;
+
+}
+
+.global-navbar {
+  
+}
+.navbar-menu {
+  display: flex;
+  background: #222222;
+  height: 4rem;
+  justify-content: space-between;
+}
+.search form {
   display: flex;
   margin: 0 10px;
 }
-.searchInput{
+.searchInput {
   border: 0;
   width: 0;
   transition: width 0.1s ease-in;
 }
-.searchInput.active{
+.searchInput.active {
   width: 150px;
 }
-.searchInput:focus{
+.searchInput:focus {
   outline: none;
 }
-.searchIcon{
+.searchIcon {
   cursor: pointer;
 }
 .horloge h2 {

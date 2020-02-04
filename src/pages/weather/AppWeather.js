@@ -2,7 +2,6 @@ import React from 'react';
 import './AppWeather.css';
 
 import 'weather-icons/css/weather-icons.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Weather from '../../components/weatherApp/Weather';
 import Form from '../../components/weatherApp/Form';
 
