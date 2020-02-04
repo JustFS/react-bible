@@ -1,0 +1,29 @@
+.weather-body {
+  text-align: center !important;
+  margin: 0 auto !important;
+  color: white !important;
+  height: 95vh;
+  background: url('./sunny.png') no-repeat center center/cover;
+}
+.weather-app {
+  height: 65vh;
+}
+form {
+  margin-top: 7rem;
+}
+form input[name='city'],
+form input[name='country'] {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  border-bottom: 2px solid whitesmoke;
+  border-radius: 0;
+}
+form input:focus {
+  background-color: transparent !important;
+  box-shadow: none !important;
+  color: white !important;
+}
+form input::placeholder {
+    color: white !important;
+}

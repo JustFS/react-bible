@@ -11,7 +11,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
+.body-bc {
   background: var(--mainGrey);
   color: var(--mainBlack);
   font-family: "Roboto", sans-serif;
@@ -23,7 +23,7 @@ h1 {
   color: var(--mainWhite);
   letter-spacing: 5px;
 }
-.App {
+.app-bc {
   margin: 0 auto;
   max-width: 1280px;
   width: 90%;

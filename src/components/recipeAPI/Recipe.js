@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import RecipeCard from './RecipeCard';
-import './recipe.css'
+import './Recipe.css'
 
 
 const Recipe = () => {
@@ -34,7 +34,7 @@ const Recipe = () => {
   }
 
   return (
-    <div className="App">
+    <div className="RecipeApp">
       <form 
         className="search-form"
         onSubmit={getSearch}

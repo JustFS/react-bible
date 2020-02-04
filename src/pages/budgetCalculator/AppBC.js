@@ -102,10 +102,10 @@ function AppBC() {
   };
 
   return (
-    <>
+    <div class="body-bc">
       {alert.show && <Alert type={alert.type} text={alert.text} />}
       <h1>budget calculator</h1>
-      <main className="App">
+      <main className="app-bc">
         <ExpenseForm
           handleSubmit={handleSubmit}
           charge={charge}
@@ -130,7 +130,7 @@ function AppBC() {
           }, 0)}
         </span>
       </h1>
-    </>
+    </div>
   );
 }
 

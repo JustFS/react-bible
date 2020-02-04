@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import Logo from './logo/Logo';
 
 
 const Navbar = (props) => {
@@ -20,6 +21,7 @@ const Navbar = (props) => {
   return(
     <div className="navbar">
       <ul className="navbarMenu">
+        {/* <Logo /> */}
         <li><NavLink to="/">Home</NavLink></li>
         <li><NavLink to="/horloge">Horloge</NavLink></li>
         <li><NavLink to="/recipe">Recipes</NavLink></li>
@@ -28,6 +30,7 @@ const Navbar = (props) => {
         <li><NavLink to="/budget-calculator">Budget Calculator</NavLink></li>
         <li><NavLink to="/markdown">Markdown</NavLink></li>
         <li><NavLink to="/youtube-like">Youtube</NavLink></li>
+        <li><NavLink to="/weather-app">Appli Meteo</NavLink></li>
       </ul>
       <div className="search">
         <form onSubmit={submitSearch}>

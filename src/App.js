@@ -10,13 +10,14 @@ import AppTour from './pages/appTourTravel/AppTour';
 import AppBC from './pages/budgetCalculator/AppBC';
 import AppMD from './pages/markdown/AppMD';
 import AppYL from './pages/youtubeLike/AppYL';
+import AppWeather from './pages/weather/AppWeather';
 
 
 function App() {
   return (
     <>
       <Router>
-      <Navbar />
+        <Navbar />
         <Route path="/" exact component={Home} />
         <Route path="/horloge" component={Clock} />
         <Route path="/recipe" component={Recipe} />
@@ -25,6 +26,7 @@ function App() {
         <Route path="/budget-calculator" component={AppBC} />
         <Route path="/markdown" component={AppMD} />
         <Route path="/youtube-like" component={AppYL} />
+        <Route path="/weather-app" component={AppWeather} />
 
       </Router>
     </>

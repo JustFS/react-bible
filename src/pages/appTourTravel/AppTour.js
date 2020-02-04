@@ -6,7 +6,7 @@ import TourList from '../../components/appTourTravel/components/TourList'
 class AppTour extends Component {
   render() {
     return (
-      <div>
+      <div className="body-ta">
         <Navbar />
         <TourList />
       </div>

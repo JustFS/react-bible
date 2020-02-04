@@ -1,5 +1,5 @@
 
-.container {
+.logo-container {
   position: relative;
   transform: rotate(135deg);
 }
@@ -12,9 +12,13 @@
   box-shadow: 0 0 0 2px #fff;
   border-radius: 50%;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(0deg);
-  animation: 50s ease-in-out infinite;
+  animation: rotate 20s ease-in-out infinite;
 }
-
+@keyframe rotate {
+  to {
+    transform: translate(-50%,- 50%) rotate(360deg);
+  }
+}
