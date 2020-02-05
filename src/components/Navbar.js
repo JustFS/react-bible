@@ -31,6 +31,7 @@ const Navbar = (props) => {
         <li><NavLink to="/markdown">Markdown</NavLink></li>
         <li><NavLink to="/youtube-like">Youtube</NavLink></li>
         <li><NavLink to="/weather-app">Appli Meteo</NavLink></li>
+        <li><NavLink to="/app-pictures">App Pictures</NavLink></li>
 
         <li className="search">
           <form onSubmit={submitSearch}>

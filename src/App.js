@@ -11,6 +11,7 @@ import AppBC from './pages/budgetCalculator/AppBC';
 import AppMD from './pages/markdown/AppMD';
 import AppYL from './pages/youtubeLike/AppYL';
 import AppWeather from './pages/weather/AppWeather';
+import AppPictures from './pages/appPictures/AppPictures';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path="/markdown" component={AppMD} />
         <Route path="/youtube-like" component={AppYL} />
         <Route path="/weather-app" component={AppWeather} />
+        <Route path="/app-pictures" component={AppPictures} />
 
       </Router>
     </>
