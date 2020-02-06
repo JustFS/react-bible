@@ -1,0 +1,56 @@
+.home-page {
+  display: grid;
+  grid-template-columns: 26% 37% 37%;
+  grid-template-rows: 350px 80px 600px 10%;
+  grid-template-areas:
+    "tit tit tit"
+    "wea wea clo"
+    "wea wea tod"
+    "foo foo foo"
+  ;
+
+  .home-title {
+    grid-area: tit;
+  }
+  .weather-app {
+    grid-area: wea;
+  }
+  .clock {
+    grid-area: clo;
+  }
+  .app-todo {
+    grid-area: tod;
+  }
+
+  .app-footer {
+    grid-area: foo;
+  }
+}
+
+h1 {
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  color: #222;
+  text-align: center;
+  font-size: 5rem;
+  padding: 70px 0 20px
+}
+
+.react-logo {
+  height: 40px;
+  pointer-events: none;
+  z-index: -10;
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: App-logo-spin infinite 50s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

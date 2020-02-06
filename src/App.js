@@ -1,17 +1,18 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './components/Home'
-import Clock from './components/Horloge'
 import Subscribe from './components/multistep-form/Subscribe';
 import Recipe from './components/recipeAPI/Recipe';
 import AppTour from './pages/appTourTravel/AppTour';
 import AppBC from './pages/budgetCalculator/AppBC';
 import AppMD from './pages/markdown/AppMD';
 import AppYL from './pages/youtubeLike/AppYL';
-import AppWeather from './pages/weather/AppWeather';
 import AppPictures from './pages/appPictures/AppPictures';
+import AppAuth from './pages/AuthFB/AppAuthFB';
+import Contact from './pages/contact/Contact';
+import Home from './pages/home/Home';
+import Sidebar from './components/Sidebar';
 
 
 function App() {
@@ -19,16 +20,17 @@ function App() {
     <>
       <Router>
         <Navbar />
+        <Sidebar />
         <Route path="/" exact component={Home} />
-        <Route path="/horloge" component={Clock} />
         <Route path="/recipe" component={Recipe} />
         <Route path="/subscribe" component={Subscribe} />
         <Route path="/app-tour" component={AppTour} />
         <Route path="/budget-calculator" component={AppBC} />
         <Route path="/markdown" component={AppMD} />
         <Route path="/youtube-like" component={AppYL} />
-        <Route path="/weather-app" component={AppWeather} />
         <Route path="/app-pictures" component={AppPictures} />
+        <Route path="/auth" component={AppAuth} />
+        <Route path="/contact" component={Contact} />
 
       </Router>
     </>

@@ -1,13 +1,9 @@
 .weather-body {
-  text-align: center !important;
-  margin: 0 auto !important;
-  color: white !important;
-  height: 95vh;
+  text-align: center;
+  color: white;
   background: url('./sunny.png') no-repeat center center/cover;
 }
-.weather-app {
-  height: 65vh;
-}
+
 form {
   margin-top: 7rem;
 }

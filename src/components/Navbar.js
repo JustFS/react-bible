@@ -1,46 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from './logo/Logo';
+import { FiSun } from 'react-icons/fi'
+import { MdWbSunny } from 'react-icons/md'
 
 
-const Navbar = (props) => {
-
-  const [search, setSearch] = useState(false);
-
-  const submitSearch = (e) => {
-    e.preventDefault();
-    alert('Searched');
-  }
-
-  const openSearch = () => {
-    setSearch(true);
-  }
-
-  const searchClass = search ? 'searchInput active' : 'searchInput';
+const Navbar = () => {
 
   return(
-    <div className="global-navbar">
-      <ul className="navbar-menu">
-        <li><Logo /></li>
-        <li><NavLink to="/">Home</NavLink></li>
-        <li><NavLink to="/horloge">Horloge</NavLink></li>
-        <li><NavLink to="/recipe">Recipes</NavLink></li>
-        <li><NavLink to="/subscribe">Subscribe</NavLink></li>
-        <li><NavLink to="/app-tour">App Tour</NavLink></li>
-        <li><NavLink to="/budget-calculator">Budget Calculator</NavLink></li>
-        <li><NavLink to="/markdown">Markdown</NavLink></li>
-        <li><NavLink to="/youtube-like">Youtube</NavLink></li>
-        <li><NavLink to="/weather-app">Appli Meteo</NavLink></li>
-        <li><NavLink to="/app-pictures">App Pictures</NavLink></li>
-
-        <li className="search">
-          <form onSubmit={submitSearch}>
-            <input type="text" className={searchClass} placeholder="Search" />
-            <img onClick={openSearch} className="searchIcon" src={require('../assets/search.png')} alt="Search" />
-          </form>
-        </li>
-      </ul>
-    </div>
+    <>
+      <div className="global-navbar">
+        <Logo />
+        <ul>
+          <li><NavLink to="/">Home</NavLink></li>
+          <li><NavLink to="/weather-app">Se connecter</NavLink></li>
+          <li><NavLink to="/app-pictures">Contact</NavLink></li>
+        </ul>
+        <div className="night-mode">
+          <FiSun className="navbar-icon" />
+          <MdWbSunny className="navbar-icon" />
+        </div>
+      </div>
+    </>
   )
 }
 
