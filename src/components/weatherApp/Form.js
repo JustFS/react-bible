@@ -25,7 +25,7 @@ const Form = (props) => {
           />
           </div>
           <div className="">
-            <button className="btn btn-warning">Get weather</button>
+            <button className="weather-btn">Get weather</button>
           </div>
         </div>
       </form>
@@ -35,7 +35,7 @@ const Form = (props) => {
 
 function error() {
   return(
-    <div className="alert alert-danger mx-5" role="alert">
+    <div className="weather-alert" role="alert">
       Please Enter City and Country
     </div>
   )

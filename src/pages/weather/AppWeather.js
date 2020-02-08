@@ -1,11 +1,10 @@
 import React from 'react';
-import './AppWeather.css';
+import './AppWeather.scss';
 
 import 'weather-icons/css/weather-icons.css';
 import Weather from '../../components/weatherApp/Weather';
 import Form from '../../components/weatherApp/Form';
 
-import BackgroundImage from './sunny.png'
 
 // api.openweathermap.org/data/2.5/weather?q=London,uk
 const API_key = '785b483d0b0e54e479a7c95142e1c7f2';
@@ -24,7 +23,6 @@ class AppWeather extends React.Component {
         temp_min: undefined,
         description: '',
         error:false,
-        backgroundImage: `url(${BackgroundImage})`
       }
 
       this.weatherIcon = {
@@ -104,19 +102,17 @@ class AppWeather extends React.Component {
   render() {
     return (
       <div className="weather-body">
-        <div className="weather-app">
-          <Form loadweather={this.getWeather} error={this.state.error} />
-          <Weather 
-            city={this.state.city} 
-            country={this.state.country} 
-            temp_celsius={this.state.celsius}
-            temp_max={this.state.temp_max}
-            temp_min={this.state.temp_min}
-            description={this.state.description}
-            weatherIcon={this.state.icon}
-          />
+        <Form loadweather={this.getWeather} error={this.state.error} />
+        <Weather 
+          city={this.state.city} 
+          country={this.state.country} 
+          temp_celsius={this.state.celsius}
+          temp_max={this.state.temp_max}
+          temp_min={this.state.temp_min}
+          description={this.state.description}
+          weatherIcon={this.state.icon}
+        />
       </div>
-    </div>
     );
   }
 }

@@ -21,11 +21,11 @@ class AddTodo extends Component {
 
   render() {
     return (
-      <div>
+      <div className="addTodo">
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="">Add new todo</label>
-          <input type="text" onChange={this.handleChange} value={this.state.content} />
+          <input type="text" placeholder="Add new todo" onChange={this.handleChange} value={this.state.content} />
         </form>
+        <p>Click on item to delete it</p>
       </div>
     );
   }

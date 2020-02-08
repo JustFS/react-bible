@@ -1,25 +1,27 @@
 import React from 'react';
 import './Home.scss';
 import AppTodoList from '../../components/toDoList/AppTodoList';
-import Clock from '../../components/Horloge';
+import Clock from '../../components/home/Horloge';
 import AppWeather from '../weather/AppWeather';
-import Footer from '../../components/Footer';
+import Footer from '../../components/home/Footer';
 
 const Home = () => {
   return (
     <div className="home-page">
-      <h1 className="home-title">This is <span style={{color: '#61DAFB'}}>react</span></h1>
+      <div className="home-title">
+        <h1>This is <span style={{color: '#61DAFB'}}>react</span></h1>
+      </div>
       <div className="weather-app">
         <AppWeather />
       </div>
       <div className="clock">
-        <Clock className="clock" />
+        <Clock />
       </div>
       <div className="app-todo">
-        <AppTodoList className="app-todo" />
+        <AppTodoList />
       </div>
       <div className="app-footer">
-        <Footer className="app-footer" />
+        <Footer />
       </div>
     </div>
   );

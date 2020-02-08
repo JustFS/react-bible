@@ -7,7 +7,7 @@
     border-radius: 50%;
     width: 0;
     height: 0;
-    box-shadow: 0 0 0 2px white;
+    box-shadow: 0 0 0 2px #61DAFB;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -17,25 +17,25 @@
 
 @mixin anim ($size, $rotate, $color) {
   border: $size dashed $color;
-  border-top-color: #fff;
-  border-right-color: #fff;
-  animation: $rotate 20s ease-in-out infinite;
+  border-top-color: #61DAFBff;
+  border-right-color: #61DAFB;
+  animation: $rotate 10s ease-in-out infinite;
 }
 
 .circle:nth-of-type(1) {
-  @include anim (20px, rotateA, blue);
+  @include anim (20px, rotateA, #111);
 }
 .circle:nth-of-type(2) {
-  @include anim (16px, rotateB, red);
+  @include anim (16px, rotateB, #333);
 }
 .circle:nth-of-type(3) {
-  @include anim (12px, rotateC, salmon);
+  @include anim (12px, rotateC, #555);
 }
 .circle:nth-of-type(4) {
-  @include anim (8px, rotateD, green);
+  @include anim (8px, rotateD, #777);
 }
 .circle:nth-of-type(5) {
-  @include anim (4px, rotateE, violet);
+  @include anim (4px, rotateE, #999);
 }
 
 @keyframes rotateA {
