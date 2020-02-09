@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from './logo/Logo';
+import Logo from '../logo/Logo';
 import { FiSun } from 'react-icons/fi'
 import { FaRegMoon } from 'react-icons/fa'
 
@@ -16,11 +16,11 @@ class Navbar extends Component {
   handleDarkMode = () => {
     this.setState({darkMode: !this.state.darkMode});
     console.log(this.state.darkMode);
-    
     // if (this.state.darkMode === true) {
-      
     // }
   }
+
+  
 
   render() {
     return(
@@ -29,8 +29,8 @@ class Navbar extends Component {
           <div className="logo-navbar"><Logo /></div>
           <ul>
             <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/weather-app">Se connecter</NavLink></li>
-            <li><NavLink to="/app-pictures">Contact</NavLink></li>
+            <li><NavLink to="/auth">Se connecter</NavLink></li>
+            <li><NavLink to="/contact-us">Contact</NavLink></li>
           </ul>
           <div className="night-mode">
             <FiSun className="navbar-icon" />

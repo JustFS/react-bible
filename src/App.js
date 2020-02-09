@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Subscribe from './components/multistep-form/Subscribe';
 import Recipe from './components/recipeAPI/Recipe';

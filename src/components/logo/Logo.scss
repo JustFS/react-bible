@@ -19,7 +19,7 @@
   border: $size dashed $color;
   border-top-color: #61DAFBff;
   border-right-color: #61DAFB;
-  animation: $rotate 10s ease-in-out infinite;
+  animation: $rotate 10s linear infinite;
 }
 
 .circle:nth-of-type(1) {

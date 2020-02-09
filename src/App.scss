@@ -1,10 +1,17 @@
-$react-color: #61DAFB;
+$react-color: #eee;
 
 * {
   text-decoration: none;
 }
 html {
   background: $react-color;
+  margin: 0;
+  padding: 0;
+}
+body {
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0;
 }
 li {
   list-style-type: none;
@@ -14,7 +21,7 @@ a {
   color: #ddd;
 }
 a:visited {
-  color: #ddd;
+  color: #222;
 }
 
 /* ******************** NAVBAR ******************** */
@@ -23,7 +30,7 @@ a:visited {
   height: 50px;
   display: grid;
   grid-template-columns: auto 70% 15%;
-  grid-template-rows: auto;
+  grid-template-rows: 1fr;
   grid-template-areas:
       "logo nav dark";
   padding: 12px 0;
@@ -41,6 +48,10 @@ a:visited {
     width: 100%;
     padding: 0 80px;
     grid-area: nav;
+
+    li a:visited {
+      color: #eee;
+    }
   }
 
   .night-mode {
@@ -102,6 +113,9 @@ a:visited {
     }
   }
 }
+.nav-active {
+  color: #61DAFB;
+}
 
 /* ********************* SIDEBAR ********************** */
 .global-sidebar {
@@ -118,8 +132,23 @@ a:visited {
   transition: transform 0.4s ease;
   z-index: 10;
 
+  h2 {
+    padding-bottom: .8rem;
+    text-align: center;
+    color: #8F1F00;
+  }
+  a {
+    color: #222;
+    font-weight: 500;
+
+    &:hover {
+      color: #8F1F00 !important;
+    }
+  }
+
   ul li {
     opacity: 0;
+    color: #eee;
     transform: translate(-100%, 0%);
     transition-duration: 0.5s;
     transition-timing-function: cubic-bezier(0.750,-0.015, 0.565,1.055);
@@ -132,6 +161,10 @@ a:visited {
     &:checked ~ ul li {
       opacity: 1;
       transform: translateX(0);
+    
+      &:hover a {
+        transform: translateX(5px);
+      }
     }
   }
 
@@ -149,16 +182,10 @@ a:visited {
     z-index: 20;
 
     &:hover svg {
-      filter: brightness(300%);
       transform: scale(1.02);
+      color: #8F1F00;
       transition: 1s ease;
-      }
     }
   }
-  h2 {
-    padding-bottom: .8rem;
-    text-align: center;
-  }
-  a:hover {
-    color: salmon !important;
-  }
+}
+
