@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import Logo from '../logo/Logo';
+import Logo from './logo/Logo';
 import { FiSun } from 'react-icons/fi'
 import { FaRegMoon } from 'react-icons/fa'
 
@@ -20,7 +20,6 @@ class Navbar extends Component {
     // }
   }
 
-  
 
   render() {
     return(
@@ -28,17 +27,23 @@ class Navbar extends Component {
         <div className="global-navbar">
           <div className="logo-navbar"><Logo /></div>
           <ul>
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/auth">Se connecter</NavLink></li>
-            <li><NavLink to="/contact-us">Contact</NavLink></li>
+            <li>
+              <NavLink exact to="/" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/auth" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Se connecter</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact-us" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Contact</NavLink>
+            </li>
           </ul>
           <div className="night-mode">
-            <FiSun className="navbar-icon" />
+            <FaRegMoon className="navbar-icon" />
             <div className="toggle-container">
               <input type="checkbox" id="switch" name="theme" onClick={this.handleDarkMode}/>
               <label htmlFor="switch">Toggle</label>
             </div>
-            <FaRegMoon className="navbar-icon" />
+            <FiSun className="navbar-icon" />
           </div>
         </div>
       </>

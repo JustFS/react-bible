@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .home-page {
   margin: 0 !important;
   overflow: hidden !important;
@@ -57,7 +59,7 @@
   h2 {
     padding: 0;
     font-size: 3.5rem;
-    color: #61DAFB;
+    color: $black;
     mix-blend-mode: difference;
     text-shadow: 2px 2px 2px #61DAFB;
   }
@@ -133,10 +135,16 @@
   background: #282C34;
   color: #61DAFB;
 
+  h2 {
+    text-transform: uppercase;
+    color: #F7C23D;
+    padding: 40px 0 0 45px;
+  }
+
   .youtuber-container {
     display: flex;
     justify-content: space-between;
-    padding: 30px 5% 60px;
+    padding: 10px 5% 60px;
 
     .line {
       a:visited {

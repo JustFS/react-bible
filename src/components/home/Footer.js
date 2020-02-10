@@ -5,6 +5,7 @@ import logo from '../../pages/home/logo.svg'
 const Footer = () => {
   return (
     <div className="footer">
+      <h2>sources</h2>
       <div className="youtuber-container">
         <div className="line">
           <a href="https://www.youtube.com/watch?v=IxuqmfO6p28" target="_blank" rel="noopener noreferrer"><p><span><i className="fa fa-youtube-play"></i></span> Weather app <span style={{color: '#FFC83D'}}>by</span> Daily Tuition</p></a>
@@ -23,7 +24,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="source">
-        <p>Made with 🍕 by J. Az</p>
+        <p>Made with <span role="img" aria-label="pizza"> 🍕 </span> by J. Az</p>
       </div>
 
       <div className="footer-logo-1">

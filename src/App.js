@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.scss';
-import Navbar from './components/navbar/Navbar';
+import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Subscribe from './components/multistep-form/Subscribe';
 import Recipe from './components/recipeAPI/Recipe';
@@ -13,6 +13,7 @@ import AppAuth from './pages/AuthFB/AppAuthFB';
 import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
 import Sidebar from './components/Sidebar';
+import AppMorpion from './pages/morpion/AppMorpion';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path="/app-pictures" component={AppPictures} />
         <Route path="/auth" component={AppAuth} />
         <Route path="/contact" component={Contact} />
+        <Route path="/morpion" component={AppMorpion} />
 
       </Router>
     </>
