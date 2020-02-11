@@ -4,9 +4,10 @@
   margin: 0 !important;
   overflow: hidden !important;
   display: grid;
-  grid-template-columns: 26% 44% 30%;
-  grid-template-rows: 400px 100px 700px auto;
+  grid-template-columns: 26% auto 30%;
+  grid-template-rows: 50px auto 100px 700px auto;
   grid-template-areas:
+    "nav nav nav"
     "tit tit tit"
     "wea wea clo"
     "wea wea tod"
@@ -28,14 +29,25 @@
   .app-footer {
     grid-area: foo;
   }
+
+  @media screen and (max-width: 798px) {
+    display: block;
+
+    .home-title {
+      margin-top: 50px;
+    
+      h1 {
+        font-size: 3rem !important;
+      }
+    }
+  }
 }
 
 .home-title {
-  height: 100%;
   display: grid;
   align-items: center;
   justify-items: center;
-  background: linear-gradient(90deg, #29323c 0%, #485563 100%);
+  background: linear-gradient(90deg, $second-color 0%, #485563 100%);
 
   h1 {
     letter-spacing: 0.7rem;
@@ -43,7 +55,7 @@
     color: #222;
     text-align: center;
     font-size: 5rem;
-    padding: 0px 0 20px;
+    padding: 6% 55px 8%;
     text-shadow: 0 1px 5px #222;
   }
 }
@@ -59,9 +71,9 @@
   h2 {
     padding: 0;
     font-size: 3.5rem;
-    color: $black;
+    color: $main-color;
     mix-blend-mode: difference;
-    text-shadow: 2px 2px 2px #61DAFB;
+    text-shadow: 2px 2px 2px $main-color;
   }
 }
 
@@ -69,7 +81,7 @@
   padding: 2rem 1rem;
   height: 100%;
   width: 100%;
-  background: #61dafb;
+  background: $main-color;
 
   .todo-list {
     font-size: 1.4rem;
@@ -85,7 +97,7 @@
     .collection-item {
       line-height: 2rem;
       font-weight: 500;
-      color: #282C34;
+      color: $second-color;
       list-style-type: "🔥";
     }
   }
@@ -96,7 +108,7 @@
     input {
       padding: 1rem 1.4rem;
       outline: none;
-      border: white;
+      border: #eee;
       border-radius: 50px;
       transition: all 0.5s ease;
       font-size: 1.2rem;
@@ -108,9 +120,9 @@
       }
 
       &:focus {
-        background-color: #282C34 !important;
-        color: #61DAFB !important;
-        border: #282C34;
+        background-color: $second-color !important;
+        color: $main-color !important;
+        border: $second-color;
       }
     }
     p {
@@ -132,12 +144,12 @@
 }
 .footer {
   width: 100%;
-  background: #282C34;
-  color: #61DAFB;
+  background: $second-color;
+  color: $main-color;
 
   h2 {
     text-transform: uppercase;
-    color: #F7C23D;
+    color: $second-opposite;
     padding: 40px 0 0 45px;
   }
 
@@ -148,7 +160,7 @@
 
     .line {
       a:visited {
-        color: #61DAFB;
+        color: $main-color;
       }
       p {
         padding: 10px 20px;

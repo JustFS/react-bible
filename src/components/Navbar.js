@@ -5,6 +5,7 @@ import { FiSun } from 'react-icons/fi'
 import { FaRegMoon } from 'react-icons/fa'
 
 
+
 class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +17,16 @@ class Navbar extends Component {
   handleDarkMode = () => {
     this.setState({darkMode: !this.state.darkMode});
     console.log(this.state.darkMode);
-    // if (this.state.darkMode === true) {
-    // }
+    if (this.state.darkMode === true) {
+      document.body.className = 'darked';   
+    } else {
+      document.body.className = 'light';
+    }
   }
 
 
   render() {
+
     return(
       <>
         <div className="global-navbar">
@@ -38,12 +43,12 @@ class Navbar extends Component {
             </li>
           </ul>
           <div className="night-mode">
-            <FaRegMoon className="navbar-icon" />
+            <FaRegMoon className="navbar-icon dark" />
             <div className="toggle-container">
               <input type="checkbox" id="switch" name="theme" onClick={this.handleDarkMode}/>
               <label htmlFor="switch">Toggle</label>
             </div>
-            <FiSun className="navbar-icon" />
+            <FiSun className="navbar-icon sun" />
           </div>
         </div>
       </>

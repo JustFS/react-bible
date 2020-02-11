@@ -3,6 +3,7 @@ import logo from '../../pages/home/logo.svg'
 
 
 const Footer = () => {
+
   return (
     <div className="footer">
       <h2>sources</h2>

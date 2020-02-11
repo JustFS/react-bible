@@ -1,5 +1,9 @@
+@import '../../variables.scss';
+
 .weather-app {
   margin: 0;
+
+    grid-template-columns: auto 70% 15%;
 }
 .weather-background {
   height: 100%;
@@ -12,10 +16,9 @@
 }
 .weather-body {
   text-align: center;
-  color: white;
+  color: #eee;
   padding: 50px 2rem;
   margin: 0 auto;
-  min-width: 400px;
   max-width: 600px;
   grid-area: main;
 }
@@ -26,18 +29,23 @@ form {
 form input[name='city'],
 form input[name='country'] {
   background-color: transparent;
-  color: white;
+  color: #eee;
   border: 0;
-  border-bottom: 2px solid whitesmoke;
+  border-bottom: 2px solid #eee;
   border-radius: 0;
 }
 form input:focus {
   background-color: transparent !important;
   box-shadow: none !important;
-  color: white !important;
+  color: #eee !important;
+
+  &::placeholder {
+    opacity: 0.3;
+    transition: all 0.4s ease;
+  }
 }
 form input::placeholder {
-  color: white !important;
+  color: #eee !important;
 }
 
 .weather-btn {
@@ -54,20 +62,20 @@ form input::placeholder {
   font-weight: bold;
 
   &:hover, &:focus {
-    border-color: #61DAFB;
+    border-color: $main-color;
     color: #222;
-    box-shadow: inset 0 0 0 2em #61DAFB, 1px 1px 5px #222;
+    box-shadow: inset 0 0 0 2em $main-color, 1px 1px 5px #222;
     transform: translateY(3px);
     cursor: pointer;
   }
 }
 
 .weather-container .cards {
-  text-shadow: 0 0px 1px #61DAFB;
+  text-shadow: 0 0px 1px $main-color;
 
   h2 {
     margin: 0px 0px 40px;
-    text-shadow: 1px 0 4px #61DAFB;
+    text-shadow: 1px 0 4px $main-color;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     font-size: 2rem;
@@ -87,7 +95,7 @@ form input::placeholder {
 }
 
 .weather-alert {
-  background: #29323c;
+  background: $second-color;
   margin: 0 auto;
   padding: 1rem;
   height: auto;

@@ -1,1 +1,29 @@
-$black: #222
+$main-color : #61DAFB;
+$second-color: #282C34;
+$opposite-color: #8F1F00;
+$second-opposite: #F2BF3C;
+
+
+// DARK MODE
+.darked {
+  filter: invert(.93);
+  transition: filter 0.3s ease-in;
+
+  .weather-background {
+    background: url(./pages/weather/images/light.PNG) no-repeat center/cover !important;
+    
+    .cards {
+      color: #eee !important;
+     }
+    }
+  .global-navbar .night-mode .navbar-icon.sun {
+    color: rgb(0, 0, 167);
+    fill: rgb(0, 0, 167);
+  }
+  .global-navbar .night-mode .toggle-container label:after {
+    background: rgb(0, 0, 167) !important;
+  }
+  .home-page .app-clock {
+    background: #222;
+  }
+}

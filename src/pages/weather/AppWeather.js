@@ -5,7 +5,7 @@ import 'weather-icons/css/weather-icons.css';
 import Weather from '../../components/weatherApp/Weather';
 import Form from '../../components/weatherApp/Form';
 
-import basic from './images/basic.jfif'
+import basic from './images/basic.jpeg'
 import thunder from './images/thunder.png'
 import drizzle from './images/drizzle.jfif'
 import rain from './images/rain.jfif'
@@ -102,7 +102,6 @@ class AppWeather extends React.Component {
       );
       const response = await api_call.json();
         
-      console.log(response);
 
     this.setState({
       city:`${response.name}, ${response.sys.country}`,
@@ -121,7 +120,6 @@ class AppWeather extends React.Component {
   };
 
   render() {
-    console.log(this.state.backgroundChange);
 
     return (
       <div className="weather-background" style={{backgroundImage: this.state.backgroundChange}}>
