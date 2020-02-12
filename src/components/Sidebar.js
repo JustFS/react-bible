@@ -17,6 +17,7 @@ class Sidebar extends Component {
   }
 
   render(){
+
     return (
       <div className="global-sidebar" style={ this.state.sidebar === true ? {transform: 'translateX(0)'} : {}}>
 
@@ -25,6 +26,12 @@ class Sidebar extends Component {
 
         <h2>App List</h2>
         <ul>
+          <li>
+            <NavLink to="/youtube-like" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Youtube</NavLink>
+          </li>
+          <li>
+            <NavLink to="/app-pictures" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Pictures</NavLink>
+          </li>
           <li>
             <NavLink to="/recipe" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Recipes</NavLink>
           </li>
@@ -41,13 +48,10 @@ class Sidebar extends Component {
             <NavLink to="/markdown" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Markdown</NavLink>
           </li>
           <li>
-            <NavLink to="/youtube-like" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Youtube</NavLink>
-          </li>
-          <li>
-            <NavLink to="/app-pictures" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Pictures</NavLink>
-          </li>
-          <li>
             <NavLink to="/morpion" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Morpion</NavLink>
+          </li>
+          <li>
+            <NavLink to="/tshirt-maker" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>T-shirt Maker</NavLink>
           </li>
         </ul>
       </div>

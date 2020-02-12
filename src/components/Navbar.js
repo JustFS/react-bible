@@ -36,7 +36,7 @@ class Navbar extends Component {
               <NavLink exact to="/" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Home</NavLink>
             </li>
             <li>
-              <NavLink to="/auth" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Se connecter</NavLink>
+              <NavLink to="/auth" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Login</NavLink>
             </li>
             <li>
               <NavLink to="/contact-us" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Contact</NavLink>

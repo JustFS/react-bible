@@ -1,0 +1,10 @@
+.project-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-list .item {
+  width: 15%;
+  height: 15%;
+}

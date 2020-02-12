@@ -14,6 +14,7 @@ import Contact from './pages/contact/Contact';
 import Home from './pages/home/Home';
 import Sidebar from './components/Sidebar';
 import AppMorpion from './pages/morpion/AppMorpion';
+import AppTshirtMaker from './pages/appTshirtMaker/AppTshirt';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
         <Route path="/auth" component={AppAuth} />
         <Route path="/contact" component={Contact} />
         <Route path="/morpion" component={AppMorpion} />
+        <Route path="/tshirt-maker" component={AppTshirtMaker} />
 
       </Router>
     </>
