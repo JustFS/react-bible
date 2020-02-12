@@ -39,7 +39,7 @@ class Navbar extends Component {
               <NavLink to="/auth" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Login</NavLink>
             </li>
             <li>
-              <NavLink to="/contact-us" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Contact</NavLink>
+              <NavLink to="/contact" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#61DAFB"}}>Contact</NavLink>
             </li>
           </ul>
           <div className="night-mode">
