@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import RecipeCard from './RecipeCard';
-import './Recipe.css'
+import RecipeCard from '../../components/recipeAPI/RecipeCard'
+import './Recipe.scss'
 
 
 const Recipe = () => {
@@ -21,7 +21,7 @@ const Recipe = () => {
     const data = await response.json();
     setRecipes(data.hits);
   }
-
+ 
   const updateSearch = e => {
     setSearch(e.target.value);
   }
@@ -36,16 +36,16 @@ const Recipe = () => {
   return (
     <div className="RecipeApp">
       <form 
-        className="search-form"
+        className="recipe-search-form"
         onSubmit={getSearch}
       >
         <input 
-          className="search-bar" 
           type="text" 
           value={search} 
-          onChange={updateSearch}/>
-        <button 
-          className="search-button" 
+          onChange={updateSearch}
+          placeholder="Enter ingredient"
+        />
+        <button  
           type="submit"
         >
           Search

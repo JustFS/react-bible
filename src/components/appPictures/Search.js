@@ -51,6 +51,7 @@ class Search extends Component {
           floatingLabelText="Amount"
           value={this.state.amount}
           onChange={this.onAmountChange}
+          className="selector-picture"
         >
           <MenuItem value={5} primaryText="5" />
           <MenuItem value={10} primaryText="10" />

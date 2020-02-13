@@ -56,7 +56,7 @@ class ImageResults extends Component {
     ];
 
     return (
-      <div>
+      <div className="app-pictures-container">
         {imageListContent}
         <Dialog
           actions={actions}

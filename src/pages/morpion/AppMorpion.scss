@@ -1,3 +1,66 @@
+@import '../../variables.scss';
+
+.app-morpion {
+  margin: 0 auto;
+  padding: 100px 0 0;
+
+  h1 {
+  color: $main-color;
+  text-align: center;
+  text-transform: uppercase;
+  }
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 50px 0;
+
+  .game-board {
+    margin: 0 auto;
+    box-shadow: 0px 0px 6px $main-color;
+  }
+  .game-info {
+    padding: 20px 0;
+    color: $main-color;
+    font-weight: bold;
+    font-size: 2rem;
+
+    ol {
+      padding-top: 40px;
+
+      li {
+        padding: 5px 0;
+
+        button {
+          font-size: 1.2rem;
+          padding: 10px 20px;
+          border-radius: 50px;
+          border: none;
+          box-shadow: 2px 2px 2px $opposite-color;
+          background: #eee;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        &:nth-child(1) button {
+          font-size: 1.5rem;
+          border-radius: 4px;
+          padding: 13px;
+          background: $opposite-color;
+          border: none;
+          box-shadow: 2px 3px 2px 1px #222;
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
 .board-row:after {
   clear: both;
   content: "";
@@ -12,15 +75,16 @@
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 6rem;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 120px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 120px;
+  outline: none;
 }
 
 .square:focus {
@@ -31,11 +95,6 @@
   background: #ddd;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
-}
 
-.game-info {
-  margin-left: 20px;
-}
+
+

@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 const RecipeCard = ({title, calories, image, ingredients}) => {
   return (
     <div>

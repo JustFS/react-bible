@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+
+.AppYL {
+  margin: 0 auto;
+  text-align: center;
+  padding: 50px 0 0;
+
+  .search-bar {
+    margin: 0 auto;
+    padding: 60px 0;
+
+    input {
+      border: none;
+      background: #eee;
+      border-radius: 50px;
+      padding: 30px 20px;
+      width: 500px;
+      text-align: center;
+      font-size: 2rem;
+      outline: none;
+      transition: all 0.3s ease;
+      box-shadow: 0px 1px 8px $opposite-color;
+
+      &:focus {
+        background-color: $main-color;
+        box-shadow: 1px 1px 10px $opposite-color;
+      }
+    }
+  }
+  .video-details {
+    height: 100%;
+    color: $main-color;
+
+    iframe {
+      height: 100%;
+      min-height: 600px;
+    }
+    h4 {
+      padding: 30px;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      text-shadow: 1px 1px 1px #eee;
+    }
+    h5 {
+      padding: 0px 0 50px;
+      font-size: 1.4rem;
+      text-shadow: -1px 1px 1px #eee;
+    }
+  }
+  .video-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .thumbail-container {
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 10px !important;
+
+      .thumbnail-card {
+        width: 300px;
+        height: 140px;
+        overflow: hidden;
+
+        &:hover {
+          filter: brightness(120%);
+        }
+
+        b {
+          opacity: 0;
+          position: absolute;
+          text-shadow: 0 1px 0px $main-color, 1px 0 0px $main-color, 1px 2px 1px $main-color, 2px 1px 1px $main-color, 2px 3px 2px $main-color;
+          transition: all 0.3s;
+          width: 300px;
+          padding: 30px 0 50px;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}
