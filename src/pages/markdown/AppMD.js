@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './AppMD.css'
+import './AppMD.scss'
 import marked from 'marked'
 import { sampleText } from './sampleText'
 
@@ -42,7 +42,9 @@ class AppMD extends Component {
               onChange={this.handleChange}
               value={this.state.text}
               className='form-control'
-              rows='35' />
+              rows='35' 
+              placeholder="Enter your text text..."
+            />
           </div>
           <div className='col-sm-6'>
             <div dangerouslySetInnerHTML={this.renderText(this.state.text)} />

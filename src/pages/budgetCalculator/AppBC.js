@@ -1,15 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./AppBC.css";
+import "./AppBC.scss";
 import ExpenseForm from "../../components/budget-calculator/ExpenseForm";
 import ExpenseList from "../../components/budget-calculator/ExpenseList"
 import Alert from "../../components/budget-calculator/Alert";
 import uuid from "uuid/v4";
 
-// const initialExpenses = [
-//   { id: uuid(), charge: "rent", amount: 1600 },
-//   { id: uuid(), charge: "car payment", amount: 400 },
-//   { id: uuid(), charge: "credit card bill ", amount: 1200 }
-// ];
 
 const initialExpenses = localStorage.getItem("expenses")
   ? JSON.parse(localStorage.getItem("expenses"))

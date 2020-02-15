@@ -21,16 +21,14 @@ const Settings = ({ color, upperText, lowerText, uploadImage, textSize, textColo
       <h4>Write text</h4>
       <input onChange={upperText} type="text" className="form-control form-control-sm mb-2" placeholder="Upper Text" />
       <input onChange={lowerText} type="text" className="form-control form-control-sm" placeholder="Lower Text" />
-      <hr/>
 
       <h4>Upload Image</h4>
       <div className="form-group">
-        <input onChange={uploadImage} type="file" className="form-control-file mb-2" />
+        <input onChange={uploadImage} type="file" />
       </div>
-      <hr/>
 
       <h4>Text Size</h4>
-      <input onChange={textSize} type="range" min="20" max="40" />
+      <input onChange={textSize} type="range" min="16" max="26" />
       <hr/>
 
       <h4>Text Color</h4>
@@ -40,7 +38,6 @@ const Settings = ({ color, upperText, lowerText, uploadImage, textSize, textColo
         <option>Red</option>
         <option>Blue</option>
       </select>
-      <hr/>
       <button className="btn btn-primary btn-sm mb-2">Save</button>
     </div>
   );

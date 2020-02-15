@@ -2,7 +2,6 @@ import React from 'react';
 import './App.scss';
 import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Subscribe from './components/multistep-form/Subscribe';
 import Recipe from './pages/recipe/Recipe';
 import AppTour from './pages/appTourTravel/AppTour';
 import AppBC from './pages/budgetCalculator/AppBC';
@@ -25,7 +24,6 @@ function App() {
         <Sidebar />
         <Route path="/" exact component={Home} />
         <Route path="/recipe" component={Recipe} />
-        <Route path="/subscribe" component={Subscribe} />
         <Route path="/app-tour" component={AppTour} />
         <Route path="/budget-calculator" component={AppBC} />
         <Route path="/markdown" component={AppMD} />

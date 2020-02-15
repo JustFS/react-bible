@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
 import Dashboard from '../../components/appTshirtMaker/components/dashboard/Dashboard';
-import Navbar from '../../components/appTshirtMaker/components/navbar/Navbar';
-import Project from '../../components/appTshirtMaker/components/project/Project';
-
-import './App.css'
+import './AppTshirt.scss'
 
 class AppTshirtMaker extends Component {
   render() {
     return (
-      <>
-        <Navbar />
+      <div className="tshirt-app">
         <Dashboard />
-        <Project />
-      </>
+      </div>
     );
   }
 }

@@ -1,0 +1,19 @@
+@import '../../variables.scss';
+
+.mkd-container {
+  padding: 6rem 3rem 0;
+  margin: 0 100px;
+  width: 80%;
+
+  textarea {
+    height: 200px;
+    width : 80%;
+    color: $main-color;
+    resize: none;
+    border: 1px solid $opposite-color;
+    padding: 1rem;
+  }
+  .col-sm-6 {
+    color: $opposite-color;
+  }
+}

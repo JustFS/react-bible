@@ -11,7 +11,7 @@ class Dashboard extends Component {
     lowerText: 'This is Lower Text',
     memeImg: '',
     url: '',
-    textSize: 38,
+    textSize: 25,
     textColor: 'white',
   }
 
@@ -65,24 +65,22 @@ class Dashboard extends Component {
   render() {
     return (
       <>
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-lg-8">
-              <Display 
-                display={this.state} 
-                textFormat={this.formatText()}
-              />
-            </div>
-            <div className="col-lg-4">
-              <Settings
-                color={this.handleTshirtColor}
-                upperText={this.handleUpperText}
-                lowerText={this.handleLowerText}
-                uploadImage={this.handleImageUpload}
-                textSize={this.handleTextSize}
-                textColor={this.handleTextColor}
-              />
-            </div>
+        <div className="app-container">
+          <div className="app-left">
+            <Display 
+              display={this.state}                 
+              textFormat={this.formatText()}
+            />
+          </div>
+          <div className="app-right">
+            <Settings
+              color={this.handleTshirtColor}
+              upperText={this.handleUpperText}
+              lowerText={this.handleLowerText}
+              uploadImage={this.handleImageUpload}
+              textSize={this.handleTextSize}
+              textColor={this.handleTextColor}
+            />
           </div>
         </div>
       </>

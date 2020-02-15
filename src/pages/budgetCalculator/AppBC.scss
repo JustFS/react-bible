@@ -15,14 +15,16 @@
   background: var(--mainGrey);
   color: var(--mainBlack);
   font-family: "Roboto", sans-serif;
-}
-/* h1 {
-  text-align: center;
-  text-transform: capitalize;
-  margin: 2rem 0;
-  color: var(--mainWhite);
-  letter-spacing: 5px;
-} */
+  padding: 6rem 0;
+
+  h1 {
+    text-align: center;
+    text-transform: capitalize;
+    margin: 2rem 0;
+    color: var(--mainWhite);
+    letter-spacing: 5px;
+  }
+} 
 .app-bc {
   margin: 0 auto;
   max-width: 1280px;

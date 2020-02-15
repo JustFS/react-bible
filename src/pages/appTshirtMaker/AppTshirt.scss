@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+.tshirt-app {
+  padding: 7rem 4rem 12rem;
+  background: white;
+
+  .app-container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-areas: 
+      "left right";
+
+    @media screen and (max-width: 856px) {
+      display: block;
+    }
+    
+
+    .app-left {
+      grid-area: left;
+      padding-top: 40px;
+
+      .imgTshirt img {
+        height: 400px;
+        position: relative;
+      }
+      .memeText {
+        position: absolute;
+        top: 220px;
+        left: 190px;
+
+        .upperText {
+          padding-bottom: 10px;
+        }
+
+        p {
+          font-family: Impact, Charcoal, sans-serif;
+          color: #fff;
+        }
+
+        img {
+          max-width: 180px;
+          height: 180px;
+          border: #fff solid 6px;
+        }
+      }
+    }
+  
+    .app-right {
+      grid-area: right;
+
+      h3 {
+        text-align: center;
+        color: $main-color;
+        padding-bottom: 10px;
+      }
+      .tshirt-color {
+        padding: 5px 0;
+      }
+    }
+  }
+}
+
+
+.lowerText p {
+  margin-top: 10px;
+}
+.tshirt-color {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tshirt-color img {
+  width: 15%;
+  height: 15%;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

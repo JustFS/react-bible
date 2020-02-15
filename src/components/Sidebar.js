@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { GiHamburgerMenu } from 'react-icons/gi'
+import { TiTimes } from 'react-icons/ti'
 
 
 class Sidebar extends Component {
@@ -22,7 +23,19 @@ class Sidebar extends Component {
       <div className="global-sidebar" style={ this.state.sidebar === true ? {transform: 'translateX(0)'} : {}}>
 
         <input type="checkbox" name="sidebar" id="sidebar" value="premium" />
-        <label htmlFor="sidebar" onClick={this.sidebarAppear.bind(this)}><GiHamburgerMenu id="GiHamburger"/></label>
+        <label 
+          htmlFor="sidebar" 
+          onClick={this.sidebarAppear.bind(this)}
+          style={ this.state.sidebar === false ? {opacity: '1'} : {opacity: '0'} }
+          >
+            <GiHamburgerMenu id="GiHamburger" />
+        </label>
+        <span 
+          onClick={this.sidebarAppear} 
+          id="closed-icon"
+        >
+          <TiTimes style={ this.state.sidebar === true ? {opacity: '1'} : {opacity: '0'} } />
+        </span>
 
         <h2>App List</h2>
         <ul>
@@ -34,9 +47,6 @@ class Sidebar extends Component {
           </li>
           <li>
             <NavLink to="/recipe" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Recipes</NavLink>
-          </li>
-          <li>
-            <NavLink to="/subscribe" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Subscribe</NavLink>
           </li>
           <li>
             <NavLink to="/app-tour" activeClassName="nav-active" activeStyle={{fontWeight: "bold", color: "#8F1F00"}}>Tour</NavLink>
